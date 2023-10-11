@@ -13,11 +13,11 @@ export const options ={
             executor: 'ramping-vus',
             startVUs: 0,
             stages: [
-              { duration: '5m', target: 14 },  // 5 minutes at 14 VUs
-              { duration: '10m', target: 65 }, // 10 minutes at 65 VUs
-              { duration: '20m', target: 150 } 
+              { duration: '5s', target: 5 },  // 5 minutes at 14 VUs
+              // { duration: '10m', target: 65 }, // 10 minutes at 65 VUs
+              // { duration: '20m', target: 150 } 
             ],
-            gracefulRampDown: '3s',
+            // gracefulRampDown: '3s',
         },
 
         pizza: {
@@ -30,11 +30,11 @@ export const options ={
             executor: 'ramping-vus',
             startVUs: 0,
             stages: [
-              { duration: '20m', target: 100 }, 
-              { duration: '15m', target: 65 }, // 10 minutes at 65 VUs
-              { duration: '10m', target: 30 } 
+              // { duration: '20m', target: 100 }, 
+              // { duration: '15m', target: 65 }, // 10 minutes at 65 VUs
+              { duration: '3', target: 1 } 
             ],
-            gracefulRampDown: '3s',
+            // gracefulRampDown: '3s',
         },
     }
 }
