@@ -5,7 +5,7 @@ import users from './users.js';
 // Test configuration
 export let options = {
     stages: [
-        { duration: '1s', target: 1 }, // Start with 1 user for 1 minute
+        { duration: '1m', target: 5 }, // Start with 1 user for 1 minute
         // { duration: '1m', target: 1 }, // Start with 1 user for 1 minute
         // { duration: '9m', target: 100 }, // Ramp up to 100 users over 9 minutes
     ],
@@ -40,7 +40,8 @@ export function userLogin() {
   // Extract the access token and refresh token from the response
   const responseBody = JSON.parse(response.body);
   refreshToken = responseBody.xrefreshToken; // Update the global refreshToken variable
-//   console.log(refreshToken);
+  console.log(user.username);
+  console.log(refreshToken);
 }
 }
 
@@ -55,7 +56,7 @@ export function userLogout() {
   const response = http.post('http://13.52.104.81:8085/api/v1/logout', null, {
     headers: headers,
   });
-  console.log(response.headers);
+  // console.log(response.headers);
 
   check(response, {
     'Logout status is 200': (r) => r.status === 200,
@@ -69,3 +70,4 @@ export default function () {
   userLogout(); // Logout with the refresh token as the Authorization header
   sleep(1); 
 }
+
