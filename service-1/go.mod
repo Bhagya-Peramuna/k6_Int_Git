@@ -28,6 +28,8 @@ require (
 	github.com/tidwall/pretty v1.2.1 // indirect
 	go.k6.io/k6 v0.46.0 // indirect
 	go.k6.io/xk6 v0.9.2 // indirect
+    <!-- github.com/k6io/xk6 v0.9.2 // indirect -->
+
 	golang.org/x/net v0.11.0 // indirect
 	golang.org/x/sys v0.10.0 // indirect
 	golang.org/x/text v0.10.0 // indirect
